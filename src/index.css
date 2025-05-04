@@ -1,68 +1,142 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+@layer base {
+  body {
+    @apply bg-gray-50 text-gray-900 antialiased;
   }
-  a:hover {
-    color: #747bff;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bold text-gray-900;
   }
-  button {
-    background-color: #f9f9f9;
+
+  h1 {
+    @apply text-3xl font-bold mb-6;
+  }
+
+  h2 {
+    @apply text-2xl font-semibold mb-4;
+  }
+
+  h3 {
+    @apply text-xl font-medium mb-2;
+  }
+
+  a {
+    @apply text-primary-600 hover:text-primary-800 hover:underline;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex justify-center items-center px-4 py-2 border rounded-md 
+    shadow-sm text-sm font-medium focus:outline-none focus:ring-2 
+    focus:ring-offset-2 focus:ring-primary-500 transition-colors 
+    duration-200 ease-in-out;
+  }
+
+  .btn-primary {
+    @apply bg-primary-600 hover:bg-primary-700 border-transparent text-white;
+  }
+
+  .btn-secondary {
+    @apply bg-white hover:bg-gray-50 border-gray-300 text-gray-700;
+  }
+
+  .btn-danger {
+    @apply bg-red-600 hover:bg-red-700 border-transparent text-white;
+  }
+
+  .btn-disabled {
+    @apply opacity-70 cursor-not-allowed hover:bg-inherit relative;
+  }
+
+  .btn-disabled:hover::after {
+    content: 'You need additional permissions';
+    @apply absolute -top-10 left-1/2 transform -translate-x-1/2 w-48 py-1 px-2 
+    bg-gray-900 text-white text-xs rounded pointer-events-none z-10;
+  }
+
+  .card {
+    @apply bg-white rounded-lg shadow-md p-6 mb-4;
+  }
+
+  .form-group {
+    @apply mb-4;
+  }
+
+  .form-label {
+    @apply block text-sm font-medium text-gray-700 mb-1;
+  }
+
+  .form-input {
+    @apply w-full rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring focus:ring-primary-500 focus:ring-opacity-50;
+  }
+
+  .tab {
+    @apply px-4 py-2 font-medium cursor-pointer border-b-2 border-transparent hover:text-primary-600;
+  }
+
+  .tab-active {
+    @apply border-primary-500 text-primary-700;
+  }
+
+  .tab-disabled {
+    @apply text-gray-400 cursor-not-allowed;
+  }
+
+  .header {
+    @apply bg-white shadow-sm sticky top-0 z-10 border-b border-gray-200;
+  }
+
+  .header .container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center;
+  }
+
+  .header .logo {
+    @apply text-xl font-bold text-primary-600 hover:text-primary-700;
+  }
+
+  .header nav {
+    @apply flex items-center space-x-4;
+  }
+
+  .user-info {
+    @apply text-sm text-gray-600 mr-4;
+  }
+
+  /* Form Styles */
+  label {
+    @apply block text-sm font-medium text-gray-700 mb-1;
+  }
+
+  input[type='text'],
+  input[type='password'],
+  input[type='email'],
+  select,
+  textarea {
+    @apply block w-full rounded-md border-gray-300 shadow-sm 
+    focus:ring-primary-500 focus:border-primary-500 sm:text-sm;
+  }
+
+  .form-error {
+    @apply mt-1 text-sm text-red-600;
+  }
+}
+
+/* Animation for loading pulse */
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
   }
 }
