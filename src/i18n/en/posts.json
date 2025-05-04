@@ -1,0 +1,10 @@
+{
+  "title": "Posts",
+  "createNewPost": "Create New Post",
+  "restricted": "(Restricted)",
+  "loading": "Loading posts...",
+  "view": "View",
+  "edit": "Edit",
+  "delete": "Delete",
+  "requiresPermission": "(Requires Permission)"
+} 

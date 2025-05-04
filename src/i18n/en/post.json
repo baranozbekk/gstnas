@@ -1,0 +1,18 @@
+{
+  "edit": "Edit Post",
+  "editRequiresPermission": "Edit Post (Requires Permission)",
+  "comments": "Comments",
+  "commentsFor": "Comments for \"{title}\"",
+  "noComments": "No comments found for this post.",
+  "createPost": "Create New Post",
+  "titleLabel": "Title",
+  "contentLabel": "Content",
+  "placeholderTitle": "Enter post title",
+  "placeholderContent": "Enter post content",
+  "createButton": "Create Post",
+  "creating": "Creating...",
+  "saveChanges": "Save Changes",
+  "saving": "Saving...",
+  "delete": "Delete",
+  "view": "View"
+} 

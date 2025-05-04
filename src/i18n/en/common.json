@@ -1,0 +1,18 @@
+{
+  "buttons": {
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "edit": "Edit",
+    "delete": "Delete",
+    "view": "View",
+    "save": "Save",
+    "create": "Create"
+  },
+  "messages": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "notFound": "Not found",
+    "requiredField": "This field is required",
+    "permissionDenied": "Permission denied"
+  }
+} 

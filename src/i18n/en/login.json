@@ -1,0 +1,10 @@
+{
+  "title": "Login",
+  "chooseUser": "Choose a user type to login:",
+  "adminUser": "Admin User",
+  "basicUser": "Basic User",
+  "hasAllPermissions": "Has all permissions:",
+  "hasLimitedPermissions": "Has limited permissions:",
+  "loginAsAdmin": "Login as Admin",
+  "loginAsBasicUser": "Login as Basic User"
+} 

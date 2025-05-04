@@ -1,0 +1,10 @@
+{
+  "title": "Access Denied (403)",
+  "message": "You don't have the required permissions to access this page.",
+  "userDetails": "Current User Details",
+  "loggedInAs": "Logged in as:",
+  "yourPermissions": "Your permissions:",
+  "needPermissions": "You need additional permissions to access this resource.",
+  "returnToDashboard": "Return to Dashboard",
+  "switchUser": "Switch User"
+} 
